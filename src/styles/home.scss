@@ -1,0 +1,239 @@
+.container {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2rem;
+    color:white;
+
+    h1 {
+        font-size: 2rem;
+        margin-bottom: 0.5rem;
+    }
+
+    p {
+        font-size: 1.2em;
+    }
+    
+    .intro {
+        max-width: 50em;
+
+        p a {
+            color: #61dafb;
+            text-decoration: none;
+            font-weight: bold;
+        }
+    }
+
+    .skills {
+        margin-top: 2rem;
+        max-width: 50em;
+
+        h2 {
+            font-size: 1.5em;
+        }
+
+        .skill-bars {
+            margin-top: 1rem;
+            width: 60%;
+            
+            .bar {
+                margin: 1.2rem 0;
+
+                &:first-child {
+                    margin-top: 0px;
+                }
+
+                .info {
+                    margin-bottom: 5px;
+
+                    span {
+                        font-weight: 500;
+                        font-size: 1.1em;
+                        opacity: 0;
+                        animation: showText 0.5s 1s linear forwards;
+                    }
+                }
+
+                .progress-line {
+                    height: 0.6em;
+                    width: 100%;
+                    background: white;
+                    position: relative;
+                    transform: scaleX(0);
+                    transform-origin: left;
+                    border-radius: 10px;
+                    animation: animate 1s cubic-bezier(1,0,0.5,1) forwards;
+
+                    span {
+                        height: 100%;
+                        position: absolute;
+                        border-radius: 10px;
+                        transform: scaleX(0);
+                        transform-origin: left;
+                        background: #4d98d1;
+                        box-shadow: 0 0 5px #4d98d1;
+                        animation: animate 1s 1s cubic-bezier(1,0,0.5,1) forwards;
+
+                        &::before{
+                            position: absolute;
+                            content: "";
+                            top: -10px;
+                            right: 0;
+                            height: 0;
+                            width: 0;
+                            border: 7px solid transparent;
+                            border-bottom-width: 0px;
+                            border-right-width: 0px;
+                            border-top-color: rgb(251, 251, 251);
+                            opacity: 0;
+                            animation: showText2 0.5s 1.5s linear forwards;
+                        }
+
+                        &::after{
+                            position: absolute;
+                            top: -28px;
+                            right: 0;
+                            font-weight: 500;
+                            background: rgb(251, 251, 251);
+                            color: rgb(0, 0, 0);
+                            padding: 1px 8px;
+                            font-size: 12px;
+                            border-radius: 3px;
+                            opacity: 0;
+                            animation: showText2 0.5s 1.5s linear forwards;
+                        }
+                    }
+
+                    &.html {
+                        span {
+                            width: 90%;
+
+                            &::after {
+                                content: "90%";
+                            }
+                        } 
+                    }
+
+                    &.css {
+                        span {
+                            width: 60%;
+
+                            &::after {
+                                content: "60%";
+                            }
+                        } 
+                    }
+
+                    &.jquery {
+                        span {
+                            width: 70%;
+
+                            &::after {
+                                content: "70%";
+                            }
+                        }
+                    }
+
+                    &.python {
+                        span {
+                            width: 70%;
+
+                            &::after {
+                                content: "50%";
+                            }
+                        }
+                    }
+
+                    &.mysql {
+                        span {
+                            width: 70%;
+
+                            &::after {
+                                content: "50%";
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .services {
+        margin-top: 2rem;
+        max-width: 50em;
+
+        ul {
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            align-items: center;
+            list-style: none;
+            gap:2rem;
+            flex-wrap:wrap;
+
+            li {
+                display:flex;
+                width: 24rem;
+                flex-direction: column;
+                background:rgb(42, 42, 42);
+                padding: 1rem;
+                border-radius: 0.2rem;
+                align-self: start;
+
+                h3 {
+                    margin-bottom: 0.1rem;
+                }
+
+                .service {
+                    font-size: 0.9em;
+
+                    i {
+                        margin-right: 0.5rem;
+                    }
+                }
+
+                .qual {
+                    display:flex;
+                    flex-direction: row;
+                    align-items: center;
+                    font-size: 0.8em;
+
+                    i {
+                        font-size: 2em;
+                        margin-right: 1rem;
+                    }
+                }
+            }
+        }
+
+        p a {
+            color: #61dafb;
+            text-decoration: none;
+            
+            &:hover {
+                color: #80def8;
+            }
+        }
+    }
+}
+
+@keyframes showText {
+    100% {
+      opacity: 1;
+    }
+}
+
+@keyframes animate {
+    100% {
+        transform: scaleX(1);
+    }
+}
+
+@keyframes showText2 {
+    100% {
+        opacity: 1;
+    }
+}

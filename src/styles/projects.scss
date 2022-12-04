@@ -1,0 +1,65 @@
+.container {
+    margin-top: 2rem;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color:white;
+
+    h1 {
+        font-size: 2rem;
+        margin-bottom: 0.5rem;
+    }
+
+    p {
+        font-size: 1.2em;
+    }
+
+    .banner {
+        background: linear-gradient(90deg, rgba(82, 105, 131, 0.407) 15%, rgba(0, 102, 255, 0.325) 100%);
+        border-radius: 16px;
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(5.5px);
+        -webkit-backdrop-filter: blur(5.5px);
+        padding:1rem;
+        margin-top: 2rem;
+        max-width: 50em;
+    }
+
+    .project-list {
+        max-width: 50em;
+        margin-top: 2rem;
+
+        ul {
+            list-style: none;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap:32px;
+
+            li {
+                align-self: start;
+                width:24em;
+                max-height: 10em;
+                border-radius: 0.6rem;
+                padding:1rem !important;
+                background:black;
+                overflow:hidden;
+                text-overflow: ellipsis;
+                 
+                h2 {
+                    font-size: 1.4em;
+                    font-weight: 400;
+                    margin-bottom: 0.5rem;
+                }
+
+                p {
+                    font-size: 0.9em;
+                    max-height: fit-content;
+                }
+            }
+        }
+    }
+}

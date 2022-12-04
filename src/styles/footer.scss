@@ -1,0 +1,45 @@
+.footer {
+    margin-top: 3rem;
+    color:white;
+    background: #0e141b;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(8.6px);
+    -webkit-backdrop-filter: blur(8.6px);
+    display:flex;
+    align-items: center;
+    padding: 1rem 0rem;
+    justify-content: center;
+    margin-right: 34rem;
+
+    p {
+        font-size: 1.1em;
+        cursor: pointer;
+        font-weight: 500;
+    }
+
+    ul {
+        list-style: none;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap:1rem;
+        position: relative;
+        left: 34rem;
+
+        li {
+            a {
+                cursor: pointer;
+                color: white;
+                text-decoration: none;
+                font-weight: 500;
+                transition: all 0.3s ease-in-out;
+
+                &:hover {
+                    color: #5ba4d4;
+                }
+            }
+        }
+    }
+}
