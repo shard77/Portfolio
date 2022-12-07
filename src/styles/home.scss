@@ -3,7 +3,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-top: 2rem;
+    margin-top: 1rem;
     color:white;
 
     h1 {
@@ -16,7 +16,7 @@
     }
     
     .intro {
-        max-width: 50em;
+        max-width: 60rem;
 
         p a {
             color: #61dafb;
@@ -27,7 +27,7 @@
 
     .skills {
         margin-top: 2rem;
-        max-width: 50em;
+        max-width: 60rem;
 
         h2 {
             font-size: 1.5em;
@@ -161,7 +161,7 @@
 
     .services {
         margin-top: 2rem;
-        max-width: 50em;
+        max-width: 60rem;
 
         ul {
             margin-top: 1rem;
@@ -176,7 +176,8 @@
 
             li {
                 display:flex;
-                width: 24rem;
+                width: 29em;
+             
                 flex-direction: column;
                 background:rgb(42, 42, 42);
                 padding: 1rem;
@@ -189,7 +190,7 @@
 
                 .service {
                     font-size: 0.9em;
-
+                    height: 10em;
                     i {
                         margin-right: 0.5rem;
                     }
@@ -200,6 +201,8 @@
                     flex-direction: row;
                     align-items: center;
                     font-size: 0.8em;
+                    min-height: 7em;
+                    max-height: 7em;
 
                     i {
                         font-size: 2em;
