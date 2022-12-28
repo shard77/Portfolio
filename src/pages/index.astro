@@ -1,32 +1,33 @@
 ---
-import { getWakaTimeData } from "../scripts/wakatime";
+import { getLangageData } from "../scripts/utils";
 
 import "../styles/home.scss";
+import 'animate.css';
+
 
 import Layout from '../layouts/BaseLayout.astro';
 import NavBar from "../components/NavBar.astro";
 import Banner from "/images/banner.png";
 
-const data = await getWakaTimeData();
+await getLangageData();
 
-console.log(data[0]);
 ---
 
 <Layout title="Welcome to Astro.">
 	<main class="container">	
 		<div class="intro">
-			<h1>Welcome to shard's website 👻</h1>
-			<p>
-				Hey! I'm John Doe, a passionate 17y old developer & cybersecurity student! I'm always working on a few projects, looking for new opportunities.
+			<h1 class="animate__animated animate__fadeIn">Welcome to shard's website 👻</h1>
+			<p class="animate__animated animate__fadeIn animate__delay-1s">
+				Hey! I'm Léon, a passionate 17y old developer & cybersecurity student! I'm always working on a few projects, looking for new opportunities.
 			</p>
-			<p>
-				<a href="https://astro.build" target="_blank" rel="noopener noreferrer">See current projects</a>
+			<p class="animate__animated animate__fadeIn animate__delay-2s">
+				<a href="/projects">See current projects</a>
 			</p>
 		</div>
-		<div class="skills">
+		<div class="skills animate__animated animate__fadeIn animate__delay-3s">
 			<h2>Skills</h2>
 			<p>
-				My skills are in constant evolution, I'm always learning new things and improving my skills in programmation & cybersecurity.
+				My skills are in constant evolution, I'm always learning new things and improving in programming & cybersecurity.
 				I'm open to any kind of project, feel free to contact me, I'll be happy to be part of it! 
 			</p>
 			<div class="skill-bars">
@@ -34,15 +35,15 @@ console.log(data[0]);
 					<div class="info">
 					<span>Python</span>
 					</div>
-					<div class="progress-line html">
+					<div class="progress-line python">
 					<span></span>
 					</div>
 				</div>
 				<div class="bar">
 					<div class="info">
-					<span>Rust</span>
+					<span>PHP</span>
 					</div>
-					<div class="progress-line css">
+					<div class="progress-line php">
 					<span></span>
 					</div>
 				</div>
@@ -50,7 +51,7 @@ console.log(data[0]);
 					<div class="info">
 					<span>HTML</span>
 					</div>
-					<div class="progress-line jquery">
+					<div class="progress-line html">
 					<span></span>
 					</div>
 				</div>
@@ -58,7 +59,7 @@ console.log(data[0]);
 					<div class="info">
 					<span>CSS/SCSS</span>
 					</div>
-					<div class="progress-line python">
+					<div class="progress-line css">
 					<span></span>
 					</div>
 				</div>
@@ -66,14 +67,14 @@ console.log(data[0]);
 					<div class="info">
 						<span>JavaScript</span>
 					</div>
-					<div class="progress-line mysql">
+					<div class="progress-line javascript">
 						<span></span>
 					</div>
 				</div>  
 			</div>
 			<p>You can also check things I've created on my github or on the project page.</p>
 		</div>
-		<div class="services">
+		<div class="services animate__animated animate__fadeIn animate__delay-4s">
 			<h2>Services</h2>
 			<ul>
 				<li>

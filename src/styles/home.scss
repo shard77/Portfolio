@@ -3,7 +3,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-top: 1rem;
+    margin-top: 5rem;
     color:white;
 
     h1 {
@@ -105,52 +105,52 @@
                         }
                     }
 
-                    &.html {
-                        span {
-                            width: 90%;
-
-                            &::after {
-                                content: "90%";
-                            }
-                        } 
-                    }
-
-                    &.css {
-                        span {
-                            width: 60%;
-
-                            &::after {
-                                content: "60%";
-                            }
-                        } 
-                    }
-
-                    &.jquery {
+                    &.python {
                         span {
                             width: 70%;
 
                             &::after {
                                 content: "70%";
                             }
-                        }
+                        } 
                     }
 
-                    &.python {
+                    &.php {
                         span {
-                            width: 70%;
+                            width: 40%;
 
                             &::after {
-                                content: "50%";
+                                content: "40%";
+                            }
+                        } 
+                    }
+
+                    &.html {
+                        span {
+                            width: 100%;
+
+                            &::after {
+                                content: "100%";
                             }
                         }
                     }
 
-                    &.mysql {
+                    &.css {
                         span {
-                            width: 70%;
+                            width: 90%;
 
                             &::after {
-                                content: "50%";
+                                content: "90%";
+                            }
+                        }
+                    }
+
+                    &.javascript {
+                        span {
+                            width: 80%;
+
+                            &::after {
+                                content: "80%";
                             }
                         }
                     }

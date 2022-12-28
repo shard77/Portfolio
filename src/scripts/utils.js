@@ -6,3 +6,9 @@ export async function getWakaTimeData() {
   
   return data;
 }
+
+export async function getLangageData() {
+  if (!localStorage.getItem("lang")) {
+    localStorage.setItem("lang", "EN");
+  }
+}

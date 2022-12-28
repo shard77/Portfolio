@@ -1,5 +1,5 @@
 .container {
-    margin-top: 2rem;
+    margin-top: 6rem;
     display:flex;
     flex-direction: column;
     align-items: center;
@@ -15,19 +15,45 @@
         font-size: 1.2em;
     }
 
+    .image {
+        max-width: 60em;
+        border-radius: 16px;		
+    }
+
     .banner {
-        background: linear-gradient(90deg, rgba(82, 105, 131, 0.407) 15%, rgba(0, 102, 255, 0.325) 100%);
+        background: linear-gradient(90deg, rgba(6, 36, 96, 0.575) 15%, rgba(0, 102, 255, 0.325) 100%);
         border-radius: 16px;
-        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-        backdrop-filter: blur(5.5px);
-        -webkit-backdrop-filter: blur(5.5px);
         padding:1rem;
         margin-top: 2rem;
-        max-width: 50em;
+        max-width: 60em;
+		border: 2px solid rgba(255, 255, 255, 0.1);
+
+		h2 {
+			font-size: 1.5em;
+			font-weight: 400;
+			margin-bottom: 0.5rem;
+		}
+
+		p {
+			font-size: 1em;
+			max-height: fit-content;
+		}
+
+		a {
+			color:white;
+			font-size: 0.9em;
+			text-decoration: none;
+			font-weight: bold;
+			transition: all 0.3s ease-in-out;
+
+			&:hover {
+				color: #61dafb;
+			}
+		}
     }
 
     .project-list {
-        max-width: 50em;
+        max-width: 60em;
         margin-top: 2rem;
 
         ul {
@@ -41,11 +67,11 @@
 
             li {
                 align-self: start;
-                width:24em;
+                width:29em;
                 max-height: 10em;
                 border-radius: 0.6rem;
                 padding:1rem !important;
-                background:black;
+                background:rgba(6, 36, 96, 0.415);
                 overflow:hidden;
                 text-overflow: ellipsis;
                  

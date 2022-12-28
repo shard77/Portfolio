@@ -1,6 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Yellowtail&display=swap');
+
 .navbar {
   color:white;
-  background: #0e141b;
+  background: #0e141bd1;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(8.6px);
   -webkit-backdrop-filter: blur(8.6px);
@@ -8,29 +10,54 @@
   align-items: center;
   padding: 1rem 0rem;
   justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  transition: all 0.3s ease-in-out;
 
-  ul {
-    list-style: none;
-    margin-right: 48rem;
+  .wrapper {
     display: flex;
-    flex-direction: row;
     align-items: center;
-    justify-content: center;
-    gap:20px;
-
-    li {
-      font-size: 1.1em;
-      cursor: pointer;
-
-      a {
-        color: white;
-        text-decoration: none;
-        font-weight: 500;
-        transition: all 0.3s ease-in-out;
-
-        &:hover {
-          color: #5ba4d4;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 60em;
+  
+    ul {
+      list-style: none;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      gap:20px;
+  
+      li {
+        font-size: 1.1em;
+        cursor: pointer;
+  
+        a {
+          color: white;
+          text-decoration: none;
+          font-weight: 500;
+          transition: all 0.3s ease-in-out;
+  
+          &:hover {
+            color: #5ba4d4;
+          }
         }
+      }
+    }
+  
+    .nav-logo {
+      cursor: pointer;
+      h2 {
+        font-family: 'Yellowtail', sans-serif;
+        font-weight: 100;
+        font-size: 1.7em;
+        text-shadow: 0 0 5px #2f7bc3, 0 0 5px #2f7bc3, 0 0 20px #2f7bc3, 0 0 10px #2f7bc3, 0 0 60px #4f9daf, 0 0 10px #1e67a4, 0 0 8px #a8b0b6;
+        color: rgba(255, 255, 255, 0.815);
+        text-align: center;
       }
     }
   }
