@@ -15,9 +15,12 @@
         font-size: 1.2em;
     }
 
-    .image {
+    .img-wrapper {
         max-width: 60em;
-        border-radius: 16px;		
+        .image {
+            max-width: 100%;
+            border-radius: 16px;		
+        }
     }
 
     .banner {
@@ -25,7 +28,7 @@
         border-radius: 16px;
         padding:1rem;
         margin-top: 2rem;
-        max-width: 60em;
+        max-width: 100%;
 		border: 2px solid rgba(255, 255, 255, 0.1);
 
 		h2 {
@@ -53,7 +56,7 @@
     }
 
     .project-list {
-        max-width: 60em;
+        max-width: 59em;
         margin-top: 2rem;
 
         ul {
@@ -67,13 +70,19 @@
 
             li {
                 align-self: start;
-                width:29em;
+                width:28.5em;
+                min-height: 9em;
                 max-height: 10em;
                 border-radius: 0.6rem;
                 padding:1rem !important;
                 background:rgba(6, 36, 96, 0.415);
                 overflow:hidden;
                 text-overflow: ellipsis;
+
+                &:hover {
+                    cursor: pointer;
+                    background:rgba(6, 36, 96, 0.615);
+                }
                  
                 h2 {
                     font-size: 1.4em;
@@ -84,6 +93,51 @@
                 p {
                     font-size: 0.9em;
                     max-height: fit-content;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 480px) { // Mobile
+    .container {
+        margin-left: 1rem;
+        margin-right: 1rem;
+    
+        .project-list {
+            ul {
+                li {
+                    width:100%;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 481px) and (max-width: 700px) {
+    .container {
+        margin-left: 1rem;
+        margin-right: 1rem;
+    
+        .project-list {
+            ul {
+                li {
+                    width:100%;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 701px) and (max-width: 1024px) {
+    .container {
+        margin-left: 1rem;
+        margin-right: 1rem;
+    
+        .project-list {
+            ul {
+                li {
+                    width:47%;
                 }
             }
         }

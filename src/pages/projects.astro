@@ -1,51 +1,54 @@
 ---
 import "../styles/projects.scss";
+import 'animate.css';
 
 import Layout from '../layouts/BaseLayout.astro';
 ---
 
-<Layout title="Posts">
+<Layout title="Projects">
 	<main class="container">
-        <img src="/images/banner.png" alt="banner image" class="image">
-        <div class="banner">
+        <div class="img-wrapper">
+            <img src="/images/banner.png" alt="banner image" class="image animate__animated animate__fadeIn">
+        </div>
+        <div class="banner animate__animated animate__fadeIn animate__delay-1s">
             <p>
                 Welcome to the projects page! 🎉<br>
-                This is a non-exhaustive list of my current projects, sometimes it is not fully updated, so make sure to also check my <a href="https://google.com/">GitHub</a> page!
+                This is a non-exhaustive list of my current projects, sometimes it is not fully updated, so make sure to also check my <a href="https://github.com/shard77">GitHub</a> page!
             </p>
         </div>
         <div class="project-list">
             <ul>
-                <li>
+                <li class="animate__animated animate__fadeIn animate__delay-2s">
                     <h2>RustShell</h2>
                     <p>
                         ⚙️🦀 Simple shell created with Rust.
                     </p>
                 </li>
-                <li>
+                <li class="animate__animated animate__fadeIn animate__delay-3s">
                     <h2>Guardia_W4</h2>
                     <p>
                         🛠️ Simple website created with HTML, CSS and JavaScript. Using the CSS framework MaterializeCSS & Vanilla JS.
                     </p>
                 </li>
-                <li>
+                <li class="animate__animated animate__fadeIn animate__delay-4s">
                     <h2>Guardia_W3</h2>
                     <p>
                         👻 A bundle of a few basic games created with Python using Pygame. Includes Pacman, Rock Paper Scissors and noughts and crosses.
                     </p>
                 </li>
-                <li>
+                <li class="animate__animated animate__fadeIn animate__delay-4s">
                     <h2>User_Card</h2>
                     <p>
                        💻 A user card created with react, using TailwindCSS.
                     </p>
                 </li>
-                <li>
+                <li class="animate__animated animate__fadeIn animate__delay-5s">
                     <h2>Project 1</h2>
                     <p>
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo eaque vel sunt neque aliquam blanditiis accusamus minima quo iusto incidunt fugiat, 
                     </p>
                 </li>
-                <li>
+                <li class="animate__animated animate__fadeIn animate__delay-5s">
                     <h2>Project 1</h2>
                     <p>
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo eaque vel sunt neque aliquam blanditiis accusamus minima quo iusto incidunt fugiat, 

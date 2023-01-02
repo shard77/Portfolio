@@ -1,0 +1,35 @@
+---
+import '../styles/footer.scss';
+
+
+const { title, url, description, author, date, image, tag } = Astro.props;
+---
+
+<li onclick="">
+    <div class="header">
+        <div class="avatar">
+            <img src="https://picsum.photos/seed/picsum/200/300" alt="avatar">
+            <h2>{author}</h2>
+        </div>
+        <div class="filter">
+            <a><i class="fa-solid fa-hashtag"></i>{tag}</a>
+        </div>
+    </div>
+    <div class="img">
+        <img src={image} alt="post image">
+    </div>
+    <div class="text">
+        <h2>{title}</h2>
+        <p>
+        {description}
+        </p>
+    </div>
+    <div class="bottom">
+        <div class="date">
+            <p>{date}</p>
+        </div>
+        <div class="read">
+            <a href={url}>Read More</a>
+        </div>
+    </div>
+</li>

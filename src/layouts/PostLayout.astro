@@ -1,33 +1,32 @@
 ---
-import '../styles/global.scss';
+import BaseLayout from './BaseLayout.astro';
+import '../styles/post.scss';
 
-import NavBar from "../components/NavBar.astro";
-import Footer from "../components/Footer.astro";
-
-export interface Props {
-	title: string;
-}
-
-const { title } = Astro.props;
+const { frontmatter } = Astro.props;
 ---
 
-<!DOCTYPE html>
-<html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<script src="https://kit.fontawesome.com/85b199d966.js" crossorigin="anonymous"></script>
-		<title>{title}</title>
-	</head>
-	<body>
-		<header>
-			<NavBar />
-		</header>
-		<slot />
-		<footer>
-			<Footer />
-		</footer>
-	</body>
-</html>
+<BaseLayout pageTitle={frontmatter.title}>
+	<div class="container">
+		<div class="second-container">
+			<div class="header">
+				<h1>{frontmatter.title}</h1>
+				<p>{frontmatter.pubDate.slice(0,10)}</p>
+			</div>
+			<div class="tags">
+				{frontmatter.tags.map((tag: unknown) => (
+					<div class="tag">
+						<i class="fa-solid fa-hashtag"></i>
+						<p>{tag}</p>
+					</div>
+				))}
+			</div>
+			<p><em>{frontmatter.description}</em></p>
+			<p id="author">Written by: {frontmatter.author}</p>
+			<img src={frontmatter.image.url}/>
+			<div class="slot">
+				<slot/>
+			</div>
+		</div>
+	</div>
+</BaseLayout>
+<script src="https://kit.fontawesome.com/85b199d966.js" crossorigin="anonymous"></script>

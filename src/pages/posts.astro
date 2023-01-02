@@ -1,19 +1,26 @@
 ---
 import "../styles/posts.scss";
+import 'animate.css';
 
 import Layout from '../layouts/BaseLayout.astro';
-import NavBar from "../components/NavBar.astro";
+import SBlogPost from "../components/SBlogPost.astro";
+import BBlogPost from "../components/BBlogPost.astro";
+
+const allPosts = await Astro.glob("../pages/posts/*.md");
+const bigPosts = allPosts.filter((post) => post.frontmatter.type === "big");
+const tinyPosts = allPosts.filter((post) => post.frontmatter.type === "tiny");
+
 ---
 
 <Layout title="Posts">
 	<main class="container">
-        <div class="banner">
+        <div class="banner animate__animated animate__fadeIn">
             <h1>Posts</h1>
         </div>
-        <div class="filters">
+       <!-- <div class="filters">
             <ul>
                 <li>
-                    <a><i class="fa-solid fa-filter"></i>All</a>
+                    <a id="all"><i class="fa-solid fa-filter"></i>All</a>
                 </li>
                 <li>
                     <a><i class="fa-solid fa-filter"></i>Cyber</a>
@@ -22,130 +29,17 @@ import NavBar from "../components/NavBar.astro";
                     <a><i class="fa-solid fa-filter"></i>Programming</a>
                 </li>
             </ul>
-        </div>
+        </div> -->
         <div class="posts">
-            <div class="big">
-                <div class="img">
-                    <img src="https://www.montagnes-du-jura.fr/uploads/2020/06/parc-naturel-regional-jura-benjamin_becker__montagnes_du_jura-bfc_0014886a4-1600x900-1642066856.jpg" alt="post image">
-                </div>
-                <div class="content">
-                    <div class="header">
-                        <div class="avatar">
-                            <img src="https://picsum.photos/seed/picsum/200/300" alt="avatar">
-                            <h2>user3</h2>
-                        </div>
-                        <div class="filter">
-                            <a><i class="fa-solid fa-filter"></i>All</a>
-                        </div>
-                    </div>
-                    <div class="text">
-                        <h2>This is a nice post</h2>
-                        <p>
-                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Hic non veritatis enim, consequuntur aliquam nihil. 
-                            Numquam beatae at tempore eos! Ea, voluptates eum. Neque, aperiam.
-                        </p>
-                    </div>
-                    <div class="date">
-                        <p>12/12/2021</p>
-                    </div>
-                </div>
+            <div class="big animate__animated animate__fadeIn animate__delay-1s">
+                {bigPosts.map((post) => <BBlogPost author={post.frontmatter.author} url={post.url} title={post.frontmatter.title} image={post.frontmatter.image.url} description={post.frontmatter.description} date={post.frontmatter.pubDate.slice(0,10)} url={post.url} tag={post.frontmatter.tags[0]}/>)}
             </div>
-            <div class="small-group">
+            <div class="small-group animate__animated animate__fadeIn animate__delay-2s">
                 <ul>
-                    <li>
-                        <div class="header">
-                            <div class="avatar">
-                                <img src="https://picsum.photos/seed/picsum/200/300" alt="avatar">
-                                <h2>user3</h2>
-                            </div>
-                            <div class="filter">
-                                <a><i class="fa-solid fa-filter"></i>All</a>
-                            </div>
-                        </div>
-                        <div class="img">
-                            <img src="https://www.montagnes-du-jura.fr/uploads/2020/06/parc-naturel-regional-jura-benjamin_becker__montagnes_du_jura-bfc_0014886a4-1600x900-1642066856.jpg" alt="post image">
-                        </div>
-                        <div class="text">
-                            <h2>Awesome Post</h2>
-                            <p>
-                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Hic non veritatis enim.
-                            </p>
-                        </div>
-                        <div class="date">
-                            <p>12/12/2021</p>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="header">
-                            <div class="avatar">
-                                <img src="https://picsum.photos/seed/picsum/200/300" alt="avatar">
-                                <h2>user3</h2>
-                            </div>
-                            <div class="filter">
-                                <a><i class="fa-solid fa-filter"></i>All</a>
-                            </div>
-                        </div>
-                        <div class="img">
-                            <img src="https://www.montagnes-du-jura.fr/uploads/2020/06/parc-naturel-regional-jura-benjamin_becker__montagnes_du_jura-bfc_0014886a4-1600x900-1642066856.jpg" alt="post image">
-                        </div>
-                        <div class="text">
-                            <h2>Awesome Post</h2>
-                            <p>
-                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Hic non veritatis enim.
-                            </p>
-                        </div>
-                        <div class="date">
-                            <p>12/12/2021</p>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="header">
-                            <div class="avatar">
-                                <img src="https://picsum.photos/seed/picsum/200/300" alt="avatar">
-                                <h2>user3</h2>
-                            </div>
-                            <div class="filter">
-                                <a><i class="fa-solid fa-filter"></i>All</a>
-                            </div>
-                        </div>
-                        <div class="img">
-                            <img src="https://www.montagnes-du-jura.fr/uploads/2020/06/parc-naturel-regional-jura-benjamin_becker__montagnes_du_jura-bfc_0014886a4-1600x900-1642066856.jpg" alt="post image">
-                        </div>
-                        <div class="text">
-                            <h2>Awesome Post</h2>
-                            <p>
-                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Hic non veritatis enim.
-                            </p>
-                        </div>
-                        <div class="date">
-                            <p>12/12/2021</p>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="header">
-                            <div class="avatar">
-                                <img src="https://picsum.photos/seed/picsum/200/300" alt="avatar">
-                                <h2>user3</h2>
-                            </div>
-                            <div class="filter">
-                                <a><i class="fa-solid fa-filter"></i>All</a>
-                            </div>
-                        </div>
-                        <div class="img">
-                            <img src="https://www.montagnes-du-jura.fr/uploads/2020/06/parc-naturel-regional-jura-benjamin_becker__montagnes_du_jura-bfc_0014886a4-1600x900-1642066856.jpg" alt="post image">
-                        </div>
-                        <div class="text">
-                            <h2>Awesome Post</h2>
-                            <p>
-                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Hic non veritatis enim.
-                            </p>
-                        </div>
-                        <div class="date">
-                            <p>12/12/2021</p>
-                        </div>
-                    </li>
+                    {tinyPosts.map((post) => <SBlogPost author={post.frontmatter.author} url={post.url} title={post.frontmatter.title} image={post.frontmatter.image.url} description={post.frontmatter.description} date={post.frontmatter.pubDate.slice(0,10)} url={post.url} tag={post.frontmatter.tags[0]}/>)}
                 </ul>
             </div>
         </div>
 	</main>
 </Layout>
+

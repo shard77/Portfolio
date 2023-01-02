@@ -22,6 +22,11 @@
             color: #61dafb;
             text-decoration: none;
             font-weight: bold;
+            transition: 0.3s;
+
+            &:hover {
+                color: #80def8;
+            }
         }
     }
 
@@ -33,125 +38,95 @@
             font-size: 1.5em;
         }
 
-        .skill-bars {
+        .tech {
+            display:flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            align-items: center;
+            gap: 1rem;
             margin-top: 1rem;
-            width: 60%;
-            
+            margin-bottom: 1rem;
+            max-height: 10rem;
+
             .bar {
-                margin: 1.2rem 0;
+                background:rgb(56, 56, 56);
+                height: 10rem;
+                width: 0.2em;
+                margin-left:0.3rem;
+            }
 
-                &:first-child {
-                    margin-top: 0px;
+            .content {
+                ul {
+                    margin-top: 1rem;
+                    margin-bottom: 1rem;
+                    display:flex;
+                    flex-direction: row;
+                    flex-wrap: wrap;
+                    justify-content: flex-start;
+                    align-items: center;
+                    list-style: none;
+                    gap: 1rem;
+                    max-width: 70%;
+                    
+                    li {    
+                        i {
+                            font-size: 1.5em;
+                        }
+
+                        .mastered {
+                            color:#61dafb;
+                        }
+
+                        .learning {
+                            color: rgb(97,218,251);
+                            background: linear-gradient(0deg, rgba(97,218,251,1) 9%, rgba(88,182,207,1) 23%, #383838 70%);
+                            -webkit-background-clip: text;
+                            -webkit-text-fill-color: transparent;
+                        }
+
+                        .little {
+                            color:#383838;
+                        }
+                    }
                 }
 
-                .info {
-                    margin-bottom: 5px;
+                .descriptors {
+                    display:flex;
+                    flex-direction: row;
+                    justify-content: flex-start;
+                    align-items: flex-start;
+                    gap: 1rem;
 
-                    span {
-                        font-weight: 500;
-                        font-size: 1.1em;
-                        opacity: 0;
-                        animation: showText 0.5s 1s linear forwards;
-                    }
-                }
-
-                .progress-line {
-                    height: 0.6em;
-                    width: 100%;
-                    background: white;
-                    position: relative;
-                    transform: scaleX(0);
-                    transform-origin: left;
-                    border-radius: 10px;
-                    animation: animate 1s cubic-bezier(1,0,0.5,1) forwards;
-
-                    span {
-                        height: 100%;
-                        position: absolute;
-                        border-radius: 10px;
-                        transform: scaleX(0);
-                        transform-origin: left;
-                        background: #4d98d1;
-                        box-shadow: 0 0 5px #4d98d1;
-                        animation: animate 1s 1s cubic-bezier(1,0,0.5,1) forwards;
-
-                        &::before{
-                            position: absolute;
-                            content: "";
-                            top: -10px;
-                            right: 0;
-                            height: 0;
-                            width: 0;
-                            border: 7px solid transparent;
-                            border-bottom-width: 0px;
-                            border-right-width: 0px;
-                            border-top-color: rgb(251, 251, 251);
-                            opacity: 0;
-                            animation: showText2 0.5s 1.5s linear forwards;
+                    .descriptor {
+                        display:flex;
+                        flex-direction: row;
+                        justify-content: flex-start;
+                        align-items: center;
+                        gap: 0.3rem;
+    
+                        .circle {
+                            background:#383838;
+                            width:0.8em;
+                            height: 0.8em;
+                            border-radius: 50%;
                         }
 
-                        &::after{
-                            position: absolute;
-                            top: -28px;
-                            right: 0;
-                            font-weight: 500;
-                            background: rgb(251, 251, 251);
-                            color: rgb(0, 0, 0);
-                            padding: 1px 8px;
-                            font-size: 12px;
-                            border-radius: 3px;
-                            opacity: 0;
-                            animation: showText2 0.5s 1.5s linear forwards;
+                        .mastered {
+                            background:#61dafb;
                         }
-                    }
 
-                    &.python {
-                        span {
-                            width: 70%;
-
-                            &::after {
-                                content: "70%";
-                            }
-                        } 
-                    }
-
-                    &.php {
-                        span {
-                            width: 40%;
-
-                            &::after {
-                                content: "40%";
-                            }
-                        } 
-                    }
-
-                    &.html {
-                        span {
-                            width: 100%;
-
-                            &::after {
-                                content: "100%";
-                            }
+                        .learning {
+                            background: rgb(97,218,251);
+                            background: linear-gradient(0deg, rgba(97,218,251,1) 9%, rgba(88,182,207,1) 23%, #383838 70%);
                         }
-                    }
 
-                    &.css {
-                        span {
-                            width: 90%;
-
-                            &::after {
-                                content: "90%";
-                            }
+                        .little {
+                            background:#383838;
                         }
-                    }
-
-                    &.javascript {
-                        span {
-                            width: 80%;
-
-                            &::after {
-                                content: "80%";
-                            }
+    
+                        p {
+                            font-size: 0.9em;
+                            color:rgb(81, 81, 81);
                         }
                     }
                 }
@@ -215,6 +190,7 @@
         p a {
             color: #61dafb;
             text-decoration: none;
+            transition: 0.3s;
             
             &:hover {
                 color: #80def8;
@@ -238,5 +214,73 @@
 @keyframes showText2 {
     100% {
         opacity: 1;
+    }
+}
+
+@media (max-width: 480px) { // Mobile
+    .container {
+        margin: 5rem 1rem 0rem 1rem;
+
+        .skills {    
+            margin-right: 1rem; 
+            .skill-bars {
+                margin-top: 1rem;
+                width: 100%;
+            }
+        }
+
+        .services {
+            ul {
+                li {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 481px) and (max-width: 768px) { // iPads, Tablets 
+    .container {
+        margin: 5rem 1rem 0rem 1rem;
+
+        .skills {    
+            margin-right: 1rem; 
+            .skill-bars {
+                margin-top: 1rem;
+                width: 100%;
+            }
+        }
+
+        .services {
+            ul {
+                li {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+
+@media (min-width: 769px) and (max-width: 992px) { // iPads, Tablets    
+    .container {
+        margin: 5rem 1rem 0rem 1rem;
+
+        .skills {   
+            margin-right: 1rem; 
+            .skill-bars {
+                margin-top: 1rem;
+                width: 100%;
+                
+            }
+        }
+
+        .services {
+            ul {
+                li {
+                  width: 100%;
+                }
+            }
+        }
     }
 }

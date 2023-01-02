@@ -1,15 +1,17 @@
 ---
-title: 'Building a Website with Astro'
+title: 'My First Blog Post'
 layout: ../../layouts/PostLayout.astro
 pubDate: 2022-07-01
-description: 'This is the first post of my new Astro blog, where I will share my learning journey as I build a new website with Astro. '
+description: 'This is the first post of my new Astro blog.'
 author: 'Astro Learner'
 image:
     url: 'https://astro.build/assets/blog/astro-1-release-update/cover.jpeg' 
     alt: 'The Astro logo with the word One.'
-tags: ["astro", "blogging", "learning in public"]
-type: 'big'
+tags: ["Cyber", "blogging", "learning in public", "cybersecurity"]
+type: 'tiny'
 ---
+# My First Blog Post
+
 Welcome to my _new blog_ about learning Astro! Here, I will share my learning journey as I build a new website.
 
 ## What I've accomplished

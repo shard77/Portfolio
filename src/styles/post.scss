@@ -1,0 +1,103 @@
+.container {
+    margin-top: 5rem;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color:white;
+
+    ol {
+        margin-left: 1rem;
+    }
+
+    .second-container {
+        max-width: 60em;
+        display:flex;
+        flex-direction: column;
+        width:100%;
+  
+        .header {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+
+            p {
+                color:gray;
+            }
+        }
+
+        .tags {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: flex-start;
+            margin-top: 0.3rem;
+            margin-bottom: 0.5rem;
+
+            .tag {
+                background: #29538e;
+                padding: 0.2rem 0.5rem;
+                border-radius: 0.5rem;
+                margin-right: 0.5rem;
+                width: fit-content;
+                height: fit-content;
+                display:flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 0.8em;
+
+                i {
+                    margin-right: 0.3rem;
+                }
+            }
+
+            a {
+              
+                color: white;
+                text-decoration: none;
+            }
+        }
+
+        #author {
+            color:gray; 
+            margin-bottom: 1rem;  
+        }
+    }
+
+    .slot {
+        margin-top: 1rem;
+    }
+}
+
+@media (max-width: 480px) { // Mobile
+    .container {
+        margin-left:1rem;
+        margin-right:1rem;
+        
+        .header {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+
+            p {
+                display:none;
+            }
+        }
+    }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+    .container {
+        margin-left:1rem;
+        margin-right:1rem;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .container {
+        margin-left:1rem;
+        margin-right:1rem;
+    }
+}
