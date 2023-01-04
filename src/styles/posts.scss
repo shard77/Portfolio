@@ -203,7 +203,9 @@
                     padding: 1rem 0.5rem;
                     border-radius: 1rem;
                     margin-bottom: 2rem;
-
+                    display:flex;
+                    flex-direction: column;
+                    
                     .header {
                         display: flex;
                         flex-direction: row;
@@ -262,7 +264,7 @@
                         overflow: hidden;
                         margin-left: 0.7rem;
                         margin-right: 0.7rem;
-
+              
                         h2 {
                             font-size: 1.2rem;
                         }

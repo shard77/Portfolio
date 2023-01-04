@@ -1,46 +1,48 @@
-.footer {
-    margin-top: 3rem;
-    color:white;
-    background: #0e141b;
-    display:flex;
-    align-items: center;
-    padding: 1rem 0rem;
-    justify-content: center;
+footer {
+    margin-top: auto;
 
-    .wrapper {
-        display: flex;
+    .footer {
+        color:white;
+        background: #0e141b;
+        display:flex;
         align-items: center;
-        justify-content: space-between;
-        width: 100%;
-        max-width: 60em;
-        margin: 0rem 1rem 0rem 1rem;
-
-        p {
-            font-size: 1.1em;
-            cursor: pointer;
-            font-weight: 500;
-        }
-
-        ul {
-            list-style: none;
+        padding: 1rem 0rem;
+        justify-content: center;
+    
+        .wrapper {
             display: flex;
-            flex-direction: row;
-            flex-wrap: wrap;
-            justify-content: center;
             align-items: center;
-            gap:1rem;
-            position: relative;
+            justify-content: space-between;
+            width: 100%;
+            max-width: 60em;
+            margin: 0rem 1rem 0rem 1rem;
 
-            li {
-                a {
-                    cursor: pointer;
-                    color: white;
-                    text-decoration: none;
-                    font-weight: 500;
-                    transition: all 0.3s ease-in-out;
+            p {
+                font-size: 1.1em;
+                cursor: pointer;
+                font-weight: 500;
+            }
 
-                    &:hover {
-                        color: #5ba4d4;
+            ul {
+                list-style: none;
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: center;
+                align-items: center;
+                gap:1rem;
+
+                li {
+                    a {
+                        cursor: pointer;
+                        color: white;
+                        text-decoration: none;
+                        font-weight: 500;
+                        transition: all 0.3s ease-in-out;
+
+                        &:hover {
+                            color: #5ba4d4;
+                        }
                     }
                 }
             }

@@ -20,13 +20,14 @@ const { frontmatter } = Astro.props;
 					</div>
 				))}
 			</div>
-			<p><em>{frontmatter.description}</em></p>
-			<p id="author">Written by: {frontmatter.author}</p>
-			<img src={frontmatter.image.url}/>
+			<p class="post-desc">{frontmatter.description}</p>
+			<img class="head-img" src={frontmatter.image.url}/>
 			<div class="slot">
 				<slot/>
 			</div>
+			<p id="author">Written by: {frontmatter.author.name}</p>
 		</div>
 	</div>
 </BaseLayout>
 <script src="https://kit.fontawesome.com/85b199d966.js" crossorigin="anonymous"></script>
+<script src="../scripts/utils.js"></script>

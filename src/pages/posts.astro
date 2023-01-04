@@ -32,11 +32,11 @@ const tinyPosts = allPosts.filter((post) => post.frontmatter.type === "tiny");
         </div> -->
         <div class="posts">
             <div class="big animate__animated animate__fadeIn animate__delay-1s">
-                {bigPosts.map((post) => <BBlogPost author={post.frontmatter.author} url={post.url} title={post.frontmatter.title} image={post.frontmatter.image.url} description={post.frontmatter.description} date={post.frontmatter.pubDate.slice(0,10)} url={post.url} tag={post.frontmatter.tags[0]}/>)}
+                {bigPosts.map((post) => <BBlogPost author={post.frontmatter.author.name} pfp={post.frontmatter.author.pfp} url={post.url} title={post.frontmatter.title} image={post.frontmatter.image.url} description={post.frontmatter.description} date={post.frontmatter.pubDate.slice(0,10)} url={post.url} tag={post.frontmatter.tags[0]}/>)}
             </div>
             <div class="small-group animate__animated animate__fadeIn animate__delay-2s">
                 <ul>
-                    {tinyPosts.map((post) => <SBlogPost author={post.frontmatter.author} url={post.url} title={post.frontmatter.title} image={post.frontmatter.image.url} description={post.frontmatter.description} date={post.frontmatter.pubDate.slice(0,10)} url={post.url} tag={post.frontmatter.tags[0]}/>)}
+                    {tinyPosts.map((post) => <SBlogPost author={post.frontmatter.author.name} pfp={post.frontmatter.author.pfp} url={post.url} title={post.frontmatter.title} image={post.frontmatter.image.url} description={post.frontmatter.description} date={post.frontmatter.pubDate.slice(0,10)} url={post.url} tag={post.frontmatter.tags[0]}/>)}
                 </ul>
             </div>
         </div>
