@@ -1,5 +1,5 @@
 # Astro Portfolio V1
 Portfolio made with Astro 🚀!
-\n
+<br>
 Containing a blog, project and home page. 
 
