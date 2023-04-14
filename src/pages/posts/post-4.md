@@ -2,15 +2,15 @@
 title: 'Building My Website With Astro'
 layout: ../../layouts/PostLayout.astro
 pubDate: 2022-07-01
-description: 'This is the first post of my new Astro blog 🚀 I will share my learning journey as I built a new website with Astro and maybe you will try it out too!'
+description: 'This is the first post of my new Astro blog 🚀 I will share my learning journey as I built a new w'
 author: 
     name: 'shard7'
     pfp: 'https://api.nuget.org/v3-flatcontainer/miki.discord.common/4.0.0-rc.6/icon'
 image:
-    url: '/images/posts/astro-banner.jpg' 
+    url: 'https://assets.website-files.com/6029242da9cc798b70c41b19/6358f2f05c532d15e5e589fb_Astro%20Framework%20Thumb-min.jpg' 
     alt: 'The Astro logo with the word One.'
 tags: ["astro", "web", "learning", "programming"]
-type: 'big'
+type: 'tiny'
 ---
 
 

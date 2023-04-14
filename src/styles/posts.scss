@@ -1,19 +1,19 @@
 .container {
-    margin-top: 5rem;
     display:flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
     color:white;
+    max-width: 60em;
+    margin: 0 auto;
+    margin-top: 5rem;
 
     .banner {
         background: linear-gradient(90deg, rgba(6, 36, 96, 0.575) 15%, rgba(0, 102, 255, 0.325) 100%);
         border-radius: 16px;
         width: 100%;
         height: 10rem;
-        max-width: 60rem;
         border-radius: 1rem;
-        margin-bottom: 2rem;
+        margin-bottom: 1rem;
 
         h1 {
             vertical-align: middle;
@@ -23,34 +23,45 @@
     }
 
     .filters {
-        max-width: 60rem;
-        margin-right: 38.5rem;
         margin-bottom: 2rem;
+        align-self: flex-start;
+        
+        h2 {
+            font-size: 0.9em;
+            text-transform: uppercase;    
+            font-weight: 700;
+            color: #29538e;
+            margin-bottom: 0.5rem;
+        }
 
         ul {
             display:flex;
             flex-direction: row;
             justify-content: center;
             align-items: center;
-            gap:10px;
+            gap:0.5rem;
             list-style: none;
+
 
             li {
                 background: #29538e;
-                padding: 0.2rem 1rem;
+                padding: 0.05rem 0.8rem;
                 border-radius: 0.5rem;
+                transition: 0.2s;
 
                 &:hover {
                     background: rgb(32, 55, 92);
                 }
 
                 a {
+                    font-weight: 500;
                     text-decoration: none;
                     color:white;
                     cursor: pointer;
+                    font-size: 0.8em;
 
                     i {
-                        margin-right: 0.5rem;
+                        margin-right: 0.3rem;
                     }
                 }
             }
@@ -60,11 +71,10 @@
     .posts {
         display: flex;
         flex-direction: column;
-        align-items: center;
         justify-content: center;
-        max-width: 60rem;
 
         .big {
+            border: 1px solid #00c8ff2e;
             background:rgba(6, 36, 96, 0.415);
             border-radius: 16px;
             padding: 2rem;
@@ -121,15 +131,17 @@
 
                     .filter {
                         background: #29538e;
-                        padding: 0.2rem 1rem;
+                        padding: 0.1rem 0.6rem;
                         border-radius: 0.5rem;
 
                         a {
+                            font-size: 0.9em;
                             text-decoration: none;
                             color:white;
+                            font-weight: 500;
         
                             i {
-                                margin-right: 0.5rem;
+                                margin-right: 0.3rem;
                             }
                         }
         
@@ -146,6 +158,7 @@
                     }
 
                     p {
+                        color:rgb(220, 220, 220);
                         font-size: 1.15rem;
                     }
                 }
@@ -155,16 +168,13 @@
                     flex-direction: row;
                     justify-content: space-between;
                     align-items: center;
-
-                    // make it fixed to the bottom
                     margin-top: auto;
-
-               
 
                     .date {
                         margin-right: 0.7rem;
                         font-size: 0.8rem;
                         color: #b3b3b3;
+                        font-weight: 600;
                     }
 
                     .read {
@@ -174,9 +184,10 @@
                             font-size: 1em;
                             margin-right: 0.7rem;
                             transition: color 0.2s;
+                            font-weight: 600;
                         
                             &:hover {
-                                color: rgb(32, 55, 92);
+                                color: #00c8ff;
                             }
                         }
                     }
@@ -184,27 +195,25 @@
             }
         }
 
-        .small-group {
-            max-width: 60em;
-
-            ul {
-                list-style: none;
+        .small-group {            
+            .flexbox-grid {
                 display: flex;
-                flex-direction: row;
+                justify-content: flex-start;
+                align-items: start;
                 flex-wrap: wrap;
-                justify-content: space-between;
-                
+                gap:3em;
+            
 
-                li {
+                .col {
+                    border: 1px solid #00c8ff2e;
+                    flex: 1 1 18em; 
                     max-width: 18em;
                     max-height: 25em;
                     background:rgba(6, 36, 96, 0.415);
                     border-radius: 16px;
                     padding: 1rem 0.5rem;
                     border-radius: 1rem;
-                    margin-bottom: 2rem;
-                    display:flex;
-                    flex-direction: column;
+                    
                     
                     .header {
                         display: flex;
@@ -236,15 +245,17 @@
     
                         .filter {
                             background: #29538e;
-                            padding: 0.2rem 0.8rem;
+                            padding: 0.1rem 0.6rem;
                             border-radius: 0.5rem;
     
                             a {
+                                font-size: 0.8em;
                                 text-decoration: none;
                                 color:white;
+                                font-weight: 500;
             
                                 i {
-                                    margin-right: 0.5rem;
+                                    margin-right: 0.3rem;
                                 }
                             }
             
@@ -253,8 +264,9 @@
 
                     .img {
                         text-align: center;
+
                         img {
-                            width: 98%;
+                            width: 95%;
                             height: 100%;
                             border-radius: 1rem;
                         }
@@ -262,6 +274,7 @@
 
                     .text {
                         overflow: hidden;
+                        text-overflow: ellipsis;
                         margin-left: 0.7rem;
                         margin-right: 0.7rem;
               
@@ -270,9 +283,11 @@
                         }
 
                         p {
+                            color:rgb(220, 220, 220);
                             font-size: 1rem;
                             max-height: 5em;
                             overflow: hidden;
+                            text-overflow: ellipsis;
                         }
                     }
 
@@ -288,18 +303,20 @@
                             margin-right: 0.7rem;
                             font-size: 0.8rem;
                             color: #b3b3b3;
+                            font-weight: 600;
                         }
 
                         .read {
                             a {
                                 text-decoration: none;
                                 color: #29538e;
-                                font-size: 1em;
+                                font-size: 0.9em;
                                 margin-right: 0.7rem;
                                 transition: color 0.2s;
+                                font-weight: 600;
                             
                                 &:hover {
-                                    color: rgb(32, 55, 92);
+                                    color: #00c8ff;
                                 }
                             }
                         }
@@ -310,7 +327,7 @@
     }
 }
 
-@media (max-width: 480px) { // Mobile
+@media (max-width: 480px) {
     .container {
         margin: 5rem 1rem 0rem 1rem;
 
@@ -324,9 +341,18 @@
     
             .small-group {
                 max-width: 60em;
-                ul {
-                    li {
+
+                .flexbox-grid {
+                    display: flex;
+                    justify-content: center;
+                    gap:2em;
+
+                    .col {
                         max-width: 100%;
+                        flex-basis: 100%;
+                        .img {
+                            display:none;
+                        }
                     }
                 }
             }
@@ -334,7 +360,39 @@
     }
 }
 
+@media (min-width: 481px) and (max-width: 639px) {
+    .container {
+        margin: 5rem 1rem 0rem 1rem;
 
+        .posts {    
+            .big {
+                height: 15em;
+                
+                .img {
+                    display:none;
+                }
+            }
+    
+            .small-group {
+                max-width: 60em;
+
+                .flexbox-grid {
+                    display: flex;
+                    justify-content: center;
+                    gap:2em;
+
+                    .col {
+                        max-width: 100%;
+
+                        .img {
+                            display:none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
 @media (min-width: 481px) and (max-width: 768px) {
     .container {
         margin: 5rem 1rem 0rem 1rem;
@@ -350,10 +408,15 @@
     
             .small-group {
                 max-width: 60em;
-                ul {
-                    li {
-                        max-width: 85%;
-                        margin-left: 8%;
+
+                .flexbox-grid {
+                    display: flex;
+                    justify-content: center;
+                    gap:2em;
+
+                    .col {
+                        max-width: 100%;
+
                     }
                 }
             }
@@ -361,32 +424,22 @@
     }
 }
 
-@media (min-width: 769px) and (max-width: 914px) { 
-    .small-group {
-        ul {
-            li {
-                max-width: 15em !important;
 
-                .header {
-                    .avatar {
-                        img {
-                            width: 1.8em !important;
-                            height: 1.8em !important;
-                        }
-
-                        h2 {
-                            font-size: 1rem !important;
-                        }
-                    }
-
-                    .filter {
-                        padding: 0.2rem 0.2rem !important;
+@media (min-width: 769px) and (max-width: 991px) { 
+    .container {
+        .posts {    
+            .small-group {
+                .flexbox-grid {
+                    .col {
+                        max-width: 47%;
+                        max-height: 27em;
                     }
                 }
             }
         }
     }
 }
+
 
 @media (min-width: 769px) and (max-width: 1024px) {
     .container {

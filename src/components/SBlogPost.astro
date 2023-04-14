@@ -2,10 +2,11 @@
 import '../styles/footer.scss';
 
 
-const { title, url, description, author, date, image, tag, pfp } = Astro.props;
+const { title, url, author, date, image, tag, pfp } = Astro.props;
+let description = Astro.props.description.substring(0, 90) + '...';
 ---
 
-<li>
+<div class="col">
     <div class="header">
         <div class="avatar">
             <img src={pfp} alt="avatar">
@@ -32,4 +33,4 @@ const { title, url, description, author, date, image, tag, pfp } = Astro.props;
             <a href={url}>Read More</a>
         </div>
     </div>
-</li>
+</div>

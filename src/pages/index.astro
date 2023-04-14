@@ -5,13 +5,13 @@ import 'animate.css';
 import Layout from '../layouts/BaseLayout.astro';
 ---
 
-<Layout title="Home">
+<Layout pageTitle="Home">
 	<main class="container">	
 		<div class="intro">
-			<h1 class="animate__animated animate__fadeIn">Welcome to shard's website 👻</h1>
+			<h1 class="animate__animated animate__fadeIn">Welcome to shard's website</h1>
 			<p class="animate__animated animate__fadeIn animate__delay-1s">
-				Hey! I'm Léon, a passionate 17y old developer & cybersecurity student!
-				I love to create and dive into new technologies, I'm also a Linux enthousiast, currently testing different Arch Linux flavors.
+				Hey! I'm a passionate developer & cybersecurity student.
+				I love to create and dive into new technologies, I am particularly interested in low-level engineering and cybersecurity.
 			</p>
 			<p class="animate__animated animate__fadeIn animate__delay-2s">
 				<a href="/projects">See current projects</a>
@@ -24,9 +24,7 @@ import Layout from '../layouts/BaseLayout.astro';
 				I'm open to any kind of project, feel free to contact me, I'll be happy to be part of it! 
 			</p>
 			<div class="tech">
-				<div class="bar">
-					
-				</div>
+				<div class="bar"></div>
 				<div class="content">
 					<ul>
 						<li>
@@ -54,33 +52,26 @@ import Layout from '../layouts/BaseLayout.astro';
 							<i class="fa-brands fa-rust learning"></i>
 						</li>
 						<li>
+							<i class="fa-solid fa-c learning"></i>
+						</li>
+						<li>
 							<i class="fa-brands fa-react learning"></i>
 						</li>
 						<li>
 							<i class="fa-brands fa-sass mastered"></i>
 						</li>
 						<li>
-							<i class="fa-brands fa-docker little"></i>
-						</li>
-						<li>
-							<i class="fa-brands fa-php little"></i>
-						</li>
-						<li>
-							<i class="fa-brands fa-java little"></i>
+							<i class="fa-brands fa-php mastered"></i>
 						</li>
 					</ul>
 					<div class="descriptors">
 						<div class="descriptor">
 							<div class="circle mastered"></div>
-							<p>Mastered</p>
+							<p>Skills</p>
 						</div>
 						<div class="descriptor">
 							<div class="circle learning"></div>
-							<p>Learning</p>
-						</div>
-						<div class="descriptor">
-							<div class="circle little"></div>
-							<p>Little Knowledge</p>
+							<p>Currently Learning</p>
 						</div>
 					</div>
 				</div>
@@ -154,9 +145,7 @@ import Layout from '../layouts/BaseLayout.astro';
 					</div>
 				</li>
 			</ul>
-			<p>
-				You can contact me trough my <a href="mailto:sh7user@gmail.com">Mail</a>, <a href="https://discordapp.com/users/267599095009509376">Discord</a> or <a href="https://t.me/user91827">Telegram</a>.
-			</p>
+			
 		</div>
 	</main>
 </Layout>

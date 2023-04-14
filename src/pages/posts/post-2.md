@@ -7,10 +7,10 @@ author:
     name: 'shard7'
     pfp: 'https://api.nuget.org/v3-flatcontainer/miki.discord.common/4.0.0-rc.6/icon'
 image:
-    url: '/images/posts/astro-banner.jpg' 
+    url: 'https://media.istockphoto.com/id/476098860/fr/vectoriel/merveilleux-matin-dans-les-blue-mountains.jpg?s=612x612&w=0&k=20&c=g7idiL96PPgc74MLGILrp2yTDpgxeGbJbODKG0-CUTM=' 
     alt: 'The Astro logo with the word One.'
-tags: ["astro", "web", "learning", "programming"]
-type: 'big'
+tags: ["programming", "web", "learning", "programming"]
+type: 'tiny'
 ---
 
 

@@ -2,7 +2,7 @@
 import '../styles/footer.scss';
 
 
-const { title, url, description, author, date, image, tag } = Astro.props;
+const { title, url, description, author, date, image, tag, pfp } = Astro.props;
 ---
 
 <div class="img">
@@ -11,7 +11,7 @@ const { title, url, description, author, date, image, tag } = Astro.props;
 <div class="content">
     <div class="header">
         <div class="avatar">
-            <img src="https://picsum.photos/seed/picsum/200/300" alt="avatar">
+            <img src={pfp} alt="avatar shard">
             <h2>{author}</h2>
         </div>
         <div class="filter">

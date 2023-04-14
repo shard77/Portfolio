@@ -17,6 +17,7 @@
 
     .img-wrapper {
         max-width: 60em;
+
         .image {
             max-width: 100%;
             border-radius: 16px;		
@@ -44,9 +45,9 @@
 
 		a {
 			color:white;
-			font-size: 0.9em;
+			font-size: 1em;
 			text-decoration: none;
-			font-weight: bold;
+			font-weight: 500;
 			transition: all 0.3s ease-in-out;
 
 			&:hover {
@@ -78,6 +79,8 @@
                 background:rgba(6, 36, 96, 0.415);
                 overflow:hidden;
                 text-overflow: ellipsis;
+                border: 1px solid #00c8ff2e;
+                transition: 0.2s;
 
                 &:hover {
                     cursor: pointer;
@@ -99,7 +102,7 @@
     }
 }
 
-@media (max-width: 480px) { // Mobile
+@media (max-width: 480px) {
     .container {
         margin-left: 1rem;
         margin-right: 1rem;

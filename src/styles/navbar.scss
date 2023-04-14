@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Yellowtail&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code&display=swap');
 
 .navbar {
   color:white;
@@ -43,7 +43,7 @@
           transition: all 0.3s ease-in-out;
   
           &:hover {
-            color: #5ba4d4;
+            color:#00c8ff;
           }
         }
       }
@@ -52,10 +52,10 @@
     .nav-logo {
       cursor: pointer;
       h2 {
-        font-family: 'Yellowtail', sans-serif;
+        font-family: 'Fira Code', monospace;
         font-weight: 100;
-        font-size: 1.7em;
-        text-shadow: 0 0 5px #2f7bc3, 0 0 5px #2f7bc3, 0 0 20px #2f7bc3, 0 0 10px #2f7bc3, 0 0 60px #4f9daf, 0 0 10px #1e67a4, 0 0 8px #a8b0b6;
+        font-size: 1.1em;
+        text-shadow: 0 0 5px #2f7bc3, 0 0 5px #2f7bc3, 0 0 20px #2f7bc3, 0 0 10px #2f7bc3, 0 0 10px #4f9daf, 0 0 10px #1e67a4, 0 0 8px #a8b0b6;
         color: rgba(255, 255, 255, 0.815);
         text-align: center;
       }

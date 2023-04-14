@@ -12,32 +12,33 @@ const tinyPosts = allPosts.filter((post) => post.frontmatter.type === "tiny");
 
 ---
 
-<Layout title="Posts">
+<Layout pageTitle="Posts">
 	<main class="container">
         <div class="banner animate__animated animate__fadeIn">
             <h1>Posts</h1>
         </div>
-       <!-- <div class="filters">
+       	<div class="filters">
+            <h2>Filter by tag</h2>
             <ul>
                 <li>
-                    <a id="all"><i class="fa-solid fa-filter"></i>All</a>
+                    <a id="all"><i class="fa-solid fa-hashtag"></i>All</a>
                 </li>
                 <li>
-                    <a><i class="fa-solid fa-filter"></i>Cyber</a>
+                    <a id="cyber"><i class="fa-solid fa-hashtag"></i>Cyber</a>
                 </li>
                 <li>
-                    <a><i class="fa-solid fa-filter"></i>Programming</a>
+                    <a id="prog"><i class="fa-solid fa-hashtag"></i>Dev</a>
                 </li>
             </ul>
-        </div> -->
+        </div>
         <div class="posts">
             <div class="big animate__animated animate__fadeIn animate__delay-1s">
                 {bigPosts.map((post) => <BBlogPost author={post.frontmatter.author.name} pfp={post.frontmatter.author.pfp} url={post.url} title={post.frontmatter.title} image={post.frontmatter.image.url} description={post.frontmatter.description} date={post.frontmatter.pubDate.slice(0,10)} url={post.url} tag={post.frontmatter.tags[0]}/>)}
             </div>
             <div class="small-group animate__animated animate__fadeIn animate__delay-2s">
-                <ul>
+                <div class="flexbox-grid">
                     {tinyPosts.map((post) => <SBlogPost author={post.frontmatter.author.name} pfp={post.frontmatter.author.pfp} url={post.url} title={post.frontmatter.title} image={post.frontmatter.image.url} description={post.frontmatter.description} date={post.frontmatter.pubDate.slice(0,10)} url={post.url} tag={post.frontmatter.tags[0]}/>)}
-                </ul>
+                </div>
             </div>
         </div>
 	</main>
